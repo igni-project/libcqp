@@ -1,0 +1,1 @@
+nobase_pkginclude_HEADERS=cqp_core.h cqp_preproc.h
