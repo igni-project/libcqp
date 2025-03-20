@@ -1,1 +1,3 @@
-nobase_pkginclude_HEADERS=cqp_core.h cqp_preproc.h
+lib_LIBRARIES=libcqp.a
+libcqp_a_SOURCES=cqp.c
+nobase_pkginclude_HEADERS=cqp.h
