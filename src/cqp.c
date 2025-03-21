@@ -1,5 +1,7 @@
 #include "cqp.h"
 
+#include <sys/socket.h>
+
 int cqp_cast_point(
 		int fd,
 		float x,
@@ -22,7 +24,10 @@ int cqp_cast_point(
 	*(float*)&req[5] = y; /* +4 to offset */
 	*(float*)&req[9] = z; /* +4 to offset*/
 
-	send(fd, req, sizeof(req), 0);
+	if (send(fd, req, sizeof(req), 0) == -1)
+	{
+		return -1;
+	}
 
 	return 0;
 }
@@ -55,9 +60,10 @@ int cqp_cast_ray(
 	*(float*)&req[17] = y_vector; /* +4 to offset */
 	*(float*)&req[21] = z_vector; /* +4 to offset*/
 
-
-
-	send(fd, req, sizeof(req), 0);
+	if (send(fd, req, sizeof(req), 0) == -1)
+	{
+		return -1;
+	}
 
 	return 0;
 }
