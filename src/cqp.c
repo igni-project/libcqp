@@ -44,7 +44,7 @@ int cqp_cast_ray(
 {
 	/* The request contains:
 	 * 	a 1-byte request code	(1) = 1
-	 * 	3 4-byte floats			(6 * 4) = 24.
+	 * 	6 4-byte floats			(6 * 4) = 24.
 	 *
 	 * The total size of the request is 25.	(24 + 1) */
 	char req[25];
