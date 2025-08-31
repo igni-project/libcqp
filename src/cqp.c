@@ -1,4 +1,4 @@
-#include "cqp.h"
+#include "../include/libcqp/cqp.h"
 
 #include <sys/socket.h>
 
