@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.15...4.0)
 
-include(CPack)
-include(GNUInstallDirs)
-
 project(
 	cqp
 	VERSION 0.1
@@ -29,6 +26,9 @@ target_include_directories(
 	cqp
 	INTERFACE include/libcqp
 )
+
+include(CPack)
+include(GNUInstallDirs)
 
 install(TARGETS cqp)
 
