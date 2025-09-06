@@ -6,6 +6,10 @@ enum {
 	CQP_REQ_CODE_CAST_RAY
 };
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int cqp_cast_point(
 		int fd,
 		float x,
@@ -22,5 +26,9 @@ int cqp_cast_ray(
 		float y_vector,
 		float z_vector
 		);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
