@@ -1,11 +1,9 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
+libdir=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@
+includedir=@CMAKE_INSTALL_PREFIX@/include/libcqp
 
 Name: libcqp
 Description: A minimal Collision Query Protocol (CQP) library
-Version: @VERSION@
-Libs: -L${libdir} -ltde
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lcqp
 Cflags: -I${includedir}
 

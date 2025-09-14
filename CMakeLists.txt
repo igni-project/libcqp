@@ -30,5 +30,8 @@ target_include_directories(
 include(CPack)
 include(GNUInstallDirs)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/libcqp.pc.in ${CMAKE_CURRENT_BINARY_DIR}/libcqp.pc @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libcqp.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+
 install(TARGETS cqp)
 
